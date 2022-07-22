@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'fonts/icomoon/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/owl.carousel.min.css') }}">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+
+  <title>Company Facebook Analysis Tool</title>
+</head>
+
+<body>
+
+
+  <div class="content">
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 mr-auto">
+          <div class="mb-5">
+            <h3 class="text-white mb-4" style="text-transform: uppercase"><u>{{profile_url}} Analysis</u></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-white h5 mb-3">Number of posts analysed:</h4>
+              <p class="text-white">{{page_no}}</p>
+            </div>
+            <div class="col-md-12">
+              <h4 class="text-white h5 mb-3">Most Liked Post:</h4>
+              <p class="text-white"><b>Post Number:</b> {{post_no}}</p>
+              <p class="text-white"><b>Post ID:</b> {{post_id}}</p>
+              <p class="text-white"><b>Caption:</b> {{post_caption}}</p>
+              <p class="text-white"><b>Likes:</b> {{post_likes}}</p>
+            </div>
+            <div class="col-md-12">
+              <h4 class="text-white h5 mb-3">Word Cloud:</h4>
+              <img src="{{url_for('static', filename='images/wordcloud.png')}}" alt="">
+            </div>
+            <div class="col-md-12">
+              <br>
+              <h4 class="text-white h5 mb-3">Most Salient Terms: (Dynamic Chart)</h4>
+              <p class="text-white">
+              <a href="/topics" class="btn btn-block btn-primary rounded-0 py-2 px-4">View Chart</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
