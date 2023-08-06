@@ -34,8 +34,7 @@ def result():
             'post_no': post_no,
             'post_id': post_id,
             'post_caption': post_caption,
-            'post_likes': post_likes
-        }
+            'post_likes': post_likes }
 
         return render_template("result.html", **context)
     return redirect(url_for('index'))
